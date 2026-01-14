@@ -74,6 +74,29 @@ const ProjectModal = ({ project, onClose }) => {
                             </span>
                         ))}
                     </div>
+                    {/* Conditional GitHub Button for Bot Project */}
+                    {project.title === 'Automated Trading Bot' && (
+                        <div className="mt-4 flex gap-2">
+                             <a 
+                                href="https://github.com/Zarrar48/trading-bot" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-sm hover:opacity-60 transition-opacity"
+                            >
+                                <i className="ph-fill ph-github-logo text-lg"></i>
+                                View Source Code
+                            </a>
+                             <a 
+                                href="https://discord.gg/3YTwF5Ar" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-sm hover:opacity-60 transition-opacity"
+                            >
+                                <i className="ph-fill ph-discord-logo text-lg"></i>
+                                Visit Discord Channel
+                            </a>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

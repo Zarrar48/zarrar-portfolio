@@ -59,6 +59,7 @@ const Projects = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
+                {/* Project 1: ERP */}
                 <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
                     <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-6">
                         <div className="w-full h-full bg-white dark:bg-slate-950 rounded-t-lg shadow-2xl flex flex-col overflow-hidden transform group-hover:scale-105 transition-transform duration-500 border border-black/5 dark:border-white/5">
@@ -93,6 +94,7 @@ const Projects = () => {
                     </div>
                 </div>
 
+                {/* Project 2: Mobile App */}
                 <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
                      <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-4">
                         <div className="w-32 h-full bg-white dark:bg-slate-950 rounded-2xl shadow-2xl border-4 border-slate-300 dark:border-slate-700 transform group-hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
@@ -119,6 +121,7 @@ const Projects = () => {
                     </div>
                 </div>
 
+                {/* Project 3: Trading Bot */}
                 <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
                      <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-6">
                         <div className="w-full h-full bg-slate-900 rounded shadow-2xl p-4 font-mono text-xs text-green-400 flex flex-col gap-1 transform group-hover:scale-105 transition-transform duration-500 border border-slate-700">
@@ -143,9 +146,23 @@ const Projects = () => {
                         <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
                             An intelligent bot using Python for web scraping and automation, integrated with Discord for real-time alerts and database logging.
                         </p>
-                        <button onClick={() => setSelectedProject(projectsData['bot'])} className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
-                            View Details <i className="ph-bold ph-arrow-right"></i>
-                        </button>
+                        
+                        {/* Modified Buttons Container */}
+                        <div className="mt-auto flex items-center justify-between">
+                            <button onClick={() => setSelectedProject(projectsData['bot'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
+                                View Details <i className="ph-bold ph-arrow-right"></i>
+                            </button>
+                            
+                            <a 
+                                href="https://trading-bot-py.streamlit.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand dark:text-slate-400 dark:hover:text-brand transition-colors"
+                            >
+                                Live Preview <i className="ph-bold ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
