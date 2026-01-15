@@ -11,6 +11,10 @@ const ProjectModal = ({ project, onClose }) => {
     if (navbar) {
         navbar.style.zIndex = 0;
     }
+    const assistant = document.getElementById('aiAssitant');
+    if (assistant) {
+        assistant.style.zIndex = 0;
+    }
 
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
@@ -22,6 +26,9 @@ const ProjectModal = ({ project, onClose }) => {
       document.body.style.paddingRight = '0px';
       if (navbar) {
           navbar.style.zIndex = 50;
+      }
+      if (assistant) {
+         assistant.style.zIndex = 100;
       }
     };
   }, []);
@@ -74,11 +81,10 @@ const ProjectModal = ({ project, onClose }) => {
                             </span>
                         ))}
                     </div>
-                    {/* Conditional GitHub Button for Bot Project */}
-                    {project.title === 'Automated Trading Bot' && (
+                    {project.title != 'Enterprise ERP System' && (
                         <div className="mt-4 flex gap-2">
                              <a 
-                                href="https://github.com/Zarrar48/trading-bot" 
+                                href={project.code}
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-sm hover:opacity-60 transition-opacity"
@@ -86,6 +92,7 @@ const ProjectModal = ({ project, onClose }) => {
                                 <i className="ph-fill ph-github-logo text-lg"></i>
                                 View Source Code
                             </a>
+                            {project.title === 'Automated Trading Bot' && (
                              <a 
                                 href="https://discord.gg/3YTwF5Ar" 
                                 target="_blank" 
@@ -95,6 +102,7 @@ const ProjectModal = ({ project, onClose }) => {
                                 <i className="ph-fill ph-discord-logo text-lg"></i>
                                 Visit Discord Channel
                             </a>
+                            )}
                         </div>
                     )}
                 </div>

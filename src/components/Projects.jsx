@@ -14,7 +14,8 @@ const projectsData = {
             'Complex SQL Stored Procedures for generating financial reports.',
             'Real-time inventory tracking and automated low-stock alerts.',
             'Responsive UI allowing access from tablet and desktop devices.'
-        ]
+        ],
+        code : '/'
     },
     'mobile': {
         title: 'Cross-Platform Mobile App',
@@ -28,7 +29,8 @@ const projectsData = {
             'Secure payment gateway integration with Stripe.',
             'Offline mode functionality using Redux Persist.',
             'Dynamic Dark/Light mode switching based on system preference.'
-        ]
+        ],
+        code : '/'
     },
     'bot': {
         title: 'Automated Trading Bot',
@@ -42,7 +44,8 @@ const projectsData = {
             'Automated buy/sell execution with low latency.',
             'Discord bot integration for instant trade notifications and logs.',
             'Backtesting engine to validate strategies before live deployment.'
-        ]
+        ],
+        code : 'https://github.com/Zarrar48/trading-bot'
     }
 };
 
@@ -88,9 +91,20 @@ const Projects = () => {
                         <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
                             A comprehensive web application for managing business processes, featuring complex SQL stored procedures and a secure C# backend.
                         </p>
-                        <button onClick={() => setSelectedProject(projectsData['erp'])} className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
-                            View Details <i className="ph-bold ph-arrow-right"></i>
-                        </button>
+                        <div className="mt-auto flex items-center justify-between">
+                            <button onClick={() => setSelectedProject(projectsData['erp'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
+                                View Details <i className="ph-bold ph-arrow-right"></i>
+                            </button>
+                            
+                            <a 
+                                href="https://www.easeead.com/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand dark:text-slate-400 dark:hover:text-brand transition-colors"
+                            >
+                                Live Preview <i className="ph-bold ph-arrow-square-out"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -115,9 +129,20 @@ const Projects = () => {
                         <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
                             A high-performance mobile application with smooth Lottie animations, Stripe payment integration, and dark mode support.
                         </p>
-                        <button onClick={() => setSelectedProject(projectsData['mobile'])} className="mt-auto inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
-                            View Details <i className="ph-bold ph-arrow-right"></i>
-                        </button>
+                        <div className="mt-auto flex items-center justify-between">
+                            <button onClick={() => setSelectedProject(projectsData['mobile'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
+                                View Details <i className="ph-bold ph-arrow-right"></i>
+                            </button>
+                            
+                            <a 
+                                href="https://cafe-84.vercel.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand dark:text-slate-400 dark:hover:text-brand transition-colors"
+                            >
+                                Live Preview <i className="ph-bold ph-arrow-square-out"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -147,7 +172,6 @@ const Projects = () => {
                             An intelligent bot using Python for web scraping and automation, integrated with Discord for real-time alerts and database logging.
                         </p>
                         
-                        {/* Modified Buttons Container */}
                         <div className="mt-auto flex items-center justify-between">
                             <button onClick={() => setSelectedProject(projectsData['bot'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
                                 View Details <i className="ph-bold ph-arrow-right"></i>

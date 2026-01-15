@@ -126,7 +126,7 @@ const AiAssistant = ({
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end pointer-events-auto">
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end pointer-events-auto" id="aiAssitant">
       {isOpen && (
         <div className="mb-4 w-[90vw] md:w-[400px] h-[500px] bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-white/20 shadow-2xl rounded-3xl flex flex-col overflow-hidden transition-all duration-300 transform origin-bottom-right animate-in fade-in zoom-in-95">
           <div className="p-4 bg-gradient-to-r from-brand to-brand-dark flex justify-between items-center text-white shrink-0">
