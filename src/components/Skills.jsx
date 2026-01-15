@@ -1,11 +1,25 @@
+import React from 'react';
 import SkillsCanvas from './SkillsCanvas';
+
+const mobileSkills = [
+    { name: ".NET Core", icon: "ph-windows-logo", color: "text-purple-500" },
+    { name: "C#", icon: "ph-code", color: "text-green-500" },
+    { name: "React", icon: "ph-atom", color: "text-cyan-400" },
+    { name: "TypeScript", icon: "ph-file-code", color: "text-blue-600" },
+    { name: "SQL", icon: "ph-database", color: "text-red-500" },
+    { name: "Docker", icon: "ph-cube", color: "text-blue-500" },
+    { name: "Python", icon: "ph-terminal-window", color: "text-yellow-500" },
+    { name: "Tailwind", icon: "ph-paint-brush", color: "text-teal-400" },
+    { name: "Git", icon: "ph-git-branch", color: "text-orange-500" },
+];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 relative z-10">
+    <section id="skills" className="py-16 md:py-24 relative z-10">
         <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
                 
+                {/* --- Left Side: Text Content --- */}
                 <div className="lg:w-1/3 reveal">
                     <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Technical Arsenal</h2>
                     <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
@@ -37,8 +51,24 @@ const Skills = () => {
                     </div>
                 </div>
 
+                {/* --- Right Side: Skills Display --- */}
                 <div className="lg:w-2/3 w-full reveal delay-200">
+                    
+                    <div className="hidden md:block">
                         <SkillsCanvas />
+                    </div>
+                    <div className="md:hidden mt-8">
+                        <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 mb-4">Core Technologies</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {mobileSkills.map((skill, index) => (
+                                <div key={index} className="glass-card px-4 py-2 rounded-full flex items-center gap-2 border border-slate-200 dark:border-white/10">
+                                    <i className={`ph-fill ${skill.icon} ${skill.color}`}></i>
+                                    <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{skill.name}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
