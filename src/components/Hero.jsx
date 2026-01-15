@@ -218,7 +218,7 @@ const Hero = ({ onJobMatchClick }) => {
             <div className="reveal mt-10 flex items-center justify-center md:justify-start gap-4 text-2xl text-slate-400">
               <a href="https://www.linkedin.com/in/muhammad-zarrar-s-2665b4284/" target="_blank" className="hover:text-brand transition-colors"><i className="ph-fill ph-linkedin-logo"></i></a>
               <a href="https://github.com/Zarrar48" target="_blank" className="hover:text-brand transition-colors"><i className="ph-fill ph-github-logo"></i></a>
-              <a href="https://discord.com/users/1159004435951927308" target="_blank" className="hover:text-brand transition-colors"><i class="ph ph-discord-logo"></i></a>
+              <a href="https://discord.com/users/1159004435951927308" target="_blank" className="hover:text-brand transition-colors"><i className="ph ph-discord-logo"></i></a>
               <a href="mailto:zarrar768@gmail.com" className="hover:text-brand transition-colors"><i className="ph-fill ph-envelope-simple"></i></a>
             </div>
           </div>
