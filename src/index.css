@@ -27,14 +27,14 @@ body {
 
 /* Dark Mode Glass */
 .dark .glass-panel {
-  background: var(--dark-card);
-  border: 1px solid var(--dark-border);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Light Mode Glass */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid var(--light-border);
+ background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .glass-card {
@@ -44,11 +44,7 @@ body {
 
 /* Dark Card */
 .dark .glass-card {
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0.01) 100%
-  );
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -63,7 +59,7 @@ body {
 
 /* Light Card */
 .glass-card {
-  background: white;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }

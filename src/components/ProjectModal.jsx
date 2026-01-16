@@ -34,8 +34,8 @@ const ProjectModal = ({ project, onClose }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={onClose}>
-        <div className="glass-panel z-100 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-8 relative dark:bg-slate-900/90 bg-white/90" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-100  flex items-center justify-center p-4 bg-white/30 dark:bg-black/60  backdrop-blur-sm" onClick={onClose}>
+        <div className="glass-panel z-100 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-8 relative" onClick={e => e.stopPropagation()}>
             <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
                 <i className="ph ph-x text-xl"></i>
             </button>
@@ -57,14 +57,14 @@ const ProjectModal = ({ project, onClose }) => {
             <div className="space-y-6">
                 <div>
                     <h3 className="text-lg font-bold mb-2 flex items-center gap-2"><i className="ph-fill ph-target text-brand"></i> Purpose</h3>
-                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{project.purpose}</p>
+                    <p className="text-slate-900 dark:text-slate-300 leading-relaxed">{project.purpose}</p>
                 </div>
 
                 <div>
                     <h3 className="text-lg font-bold mb-2 flex items-center gap-2"><i className="ph-fill ph-check-circle text-brand"></i> Key Features</h3>
                     <ul className="space-y-2">
                         {project.features.map((feat, index) => (
-                            <li key={index} className="flex items-start gap-2 text-slate-600 dark:text-slate-300 text-sm">
+                            <li key={index} className="flex items-start gap-2 text-slate-900 dark:text-slate-300 text-sm">
                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span>
                                 {feat}
                             </li>
@@ -76,7 +76,7 @@ const ProjectModal = ({ project, onClose }) => {
                     <h3 className="text-lg font-bold mb-3 flex items-center gap-2"><i className="ph-fill ph-code-block text-brand"></i> Technology Stack</h3>
                     <div className="flex flex-wrap gap-2">
                         {project.stack.map(tech => (
-                            <span key={tech} className="px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-sm font-medium">
+                            <span key={tech} className="px-3 py-1.5 rounded-lg border border-slate-900 dark:border-slate-100 dark:bg-slate-900 text-sm font-medium">
                                 {tech}
                             </span>
                         ))}

@@ -176,10 +176,10 @@ const Hero = ({ onJobMatchClick }) => {
           <div className="reveal w-full md:w-1/3 flex justify-center order-1 md:order-2">
             <div className="relative w-64 h-64 md:w-80 md:h-80 profile-img-container rounded-full p-1 bg-white dark:bg-dark-bg">
               <img src={avatar} alt="Muhammad Zarrar Shabbir" className="w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-2xl" />
-              <div className="absolute top-4 right-0 glass-panel px-4 py-2 rounded-full text-xs font-bold shadow-lg animate-bounce flex items-center gap-2">
+              <div className="absolute top-4 right-0 glass-panel px-4 py-2 rounded-full text-xs font-bold shadow-lg animate-bounce flex items-center gap-2 text-brand">
                 <i className="ph-fill ph-code text-brand"></i> Full Stack
               </div>
-              <div className="absolute bottom-8 left-0 glass-panel px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-2">
+              <div className="absolute bottom-8 left-0 glass-panel px-4 py-2 rounded-full text-xs font-bold shadow-lg animate-bounce flex items-center gap-2 text-green-500">
                 <i className="ph-fill ph-check-circle text-green-500"></i> Open to Work
               </div>
             </div>

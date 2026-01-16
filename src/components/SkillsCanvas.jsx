@@ -21,12 +21,10 @@ const skillsData = [
 
 const SkillTag = ({ name, icon, color, bg }) => (
     <div className={`
-        flex-shrink-0 flex items-center gap-3 px-6 py-3 rounded-full 
-        border border-white/10 bg-white/5 backdrop-blur-md
-        hover:bg-white/10 hover:border-white/20 hover:scale-105 
+        flex-shrink-0 flex items-center gap-3 px-6 py-3 hover:scale-105 
         transition-all duration-300 cursor-default group
     `}>
-        <div className={`w-8 h-8 rounded-full ${bg} flex items-center justify-center`}>
+        <div className={`w-8 h-8  flex items-center justify-center`}>
             <i className={`ph-fill ${icon} ${color} text-lg`}></i>
         </div>
         <span className="text-slate-600 dark:text-slate-300 font-medium whitespace-nowrap group-hover:text-brand transition-colors">
@@ -37,11 +35,11 @@ const SkillTag = ({ name, icon, color, bg }) => (
 
 const SkillsCanvas = () => {
   return (
-    <div className="glass-panel w-full h-[400px] flex flex-col justify-center gap-8 overflow-hidden bg-slate-100 dark:bg-slate-900/50 rounded-xl relative">
+    <div className="glass-panel w-full h-[400px] flex flex-col justify-center gap-8 overflow-hidden rounded-xl relative">
         
         <div className="relative flex overflow-hidden mask-gradient">
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-100 to-transparent dark:from-[#0b1021] z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-100 to-transparent dark:from-[#0b1021] z-10"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-transparent to-transparent dark:from-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-transparent to-transparent dark:from-transparent z-10"></div>
 
             <div className="flex animate-scroll gap-6 py-2 w-max">
                 {[...skillsData[0], ...skillsData[0], ...skillsData[0]].map((skill, idx) => (
@@ -51,8 +49,8 @@ const SkillsCanvas = () => {
         </div>
 
         <div className="relative flex overflow-hidden mask-gradient">
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-100 to-transparent dark:from-[#0b1021] z-10"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-100 to-transparent dark:from-[#0b1021] z-10"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-transparent to-transparent dark:from-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-transparent to-transparent dark:from-transparent z-10"></div>
 
             <div className="flex animate-scroll-reverse gap-6 py-2 w-max">
                  {[...skillsData[1], ...skillsData[1], ...skillsData[1]].map((skill, idx) => (
