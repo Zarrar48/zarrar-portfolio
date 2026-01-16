@@ -34,7 +34,7 @@ const ProjectModal = ({ project, onClose }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-100  flex items-center justify-center p-4 bg-white/30 dark:bg-black/60  backdrop-blur-sm" onClick={onClose}>
+    <div className="fixed inset-0 z-100  flex items-center justify-center p-4 bg-slate-200/60 dark:bg-black/60  backdrop-blur-sm" onClick={onClose}>
         <div className="glass-panel z-100 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl p-8 relative" onClick={e => e.stopPropagation()}>
             <button onClick={onClose} className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
                 <i className="ph ph-x text-xl"></i>
