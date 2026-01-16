@@ -81,7 +81,7 @@ const ProjectModal = ({ project, onClose }) => {
                             </span>
                         ))}
                     </div>
-                    {project.title != 'Enterprise ERP System' && (
+                    {project.code != '/' && (
                         <div className="mt-4 flex gap-2">
                              <a 
                                 href={project.code}
@@ -92,9 +92,9 @@ const ProjectModal = ({ project, onClose }) => {
                                 <i className="ph-fill ph-github-logo text-lg"></i>
                                 View Source Code
                             </a>
-                            {project.title === 'Automated Trading Bot' && (
+                            {project.discord != '/' && (
                              <a 
-                                href="https://discord.gg/3YTwF5Ar" 
+                                href={project.discord} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-bold text-sm hover:opacity-60 transition-opacity"

@@ -15,7 +15,8 @@ const projectsData = {
             'Real-time inventory tracking and automated low-stock alerts.',
             'Responsive UI allowing access from tablet and desktop devices.'
         ],
-        code : '/'
+        code : '/',
+        discord : '/'
     },
     'mobile': {
         title: 'Cross-Platform Mobile App',
@@ -30,7 +31,8 @@ const projectsData = {
             'Offline mode functionality using Redux Persist.',
             'Dynamic Dark/Light mode switching based on system preference.'
         ],
-        code : '/'
+        code : 'https://github.com/SumairAziz/Cafe-84',
+        discord : '/'
     },
     'bot': {
         title: 'Automated Trading Bot',
@@ -45,7 +47,24 @@ const projectsData = {
             'Discord bot integration for instant trade notifications and logs.',
             'Backtesting engine to validate strategies before live deployment.'
         ],
-        code : 'https://github.com/Zarrar48/trading-bot'
+        code : 'https://github.com/Zarrar48/trading-bot',
+        discord : 'https://discord.gg/3YTwF5Ar'
+    },
+    'quantix': {
+        title: 'Quantix AI Analytics',
+        icon: 'ph-trend-up', 
+        color: 'text-cyan-500',
+        bg: 'bg-cyan-500/10',
+        purpose: 'A next-generation financial analytics dashboard utilizing AI to predict market trends and visualize complex datasets in real-time.',
+        stack: ['Next.js', 'TypeScript', 'FastAPI', 'Python', 'WebSockets', 'PostgreSQL', 'Discord API', 'Tailwind CSS'],
+        features: [
+            'AI-driven predictive modeling for asset price movements.',
+            'Interactive, high-performance charting libraries.',
+            'Server-side rendering for optimal SEO and performance.',
+            'Secure authentication and cloud data storage via Supabase.'
+        ],
+        code : 'https://github.com/Zarrar48/quantix',
+        discord : 'https://discord.gg/SExNGjV3'
     }
 };
 
@@ -189,6 +208,52 @@ const Projects = () => {
 
                     </div>
                 </div>
+        <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
+                    <div className="h-52 bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                        {/* Background Grid Effect */}
+                        <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'radial-gradient(#22d3ee 1px, transparent 1px)', backgroundSize: '20px 20px'}}></div>
+                        
+                        {/* Central Glowing Element */}
+                        <div className="relative z-10 w-24 h-24 bg-cyan-900/30 rounded-full flex items-center justify-center border border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.2)] transform group-hover:scale-110 transition-transform duration-500">
+                             <div className="absolute inset-0 rounded-full border-t border-cyan-400 animate-spin-slow"></div>
+                             <i className="ph-bold ph-trend-up text-4xl text-cyan-400"></i>
+                        </div>
+                        
+                        {/* Decorative floating elements */}
+                        <div className="absolute bottom-4 left-4 text-[10px] font-mono text-cyan-500/50">
+                            <div>CPU: 42%</div>
+                            <div>MEM: 1.2GB</div>
+                        </div>
+                    </div>
+                    
+                    <div className="p-6 flex-1 flex flex-col">
+                        <div className="flex gap-2 mb-4">
+                            <span className="px-2 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-500 rounded">Next.js</span>
+                            <span className="px-2 py-1 text-xs font-bold bg-slate-500/10 text-slate-500 dark:text-slate-300 rounded">TypeScript</span>
+                            <span className="px-2 py-1 text-xs font-bold bg-indigo-500/10 text-indigo-500 dark:text-indigo-300 rounded">Python</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Quantix AI Analytics</h3>
+                        <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
+                            A next-generation financial analytics dashboard utilizing AI to predict market trends and visualize complex datasets in real-time.
+                        </p>
+                        
+                        <div className="mt-auto flex items-center justify-between">
+                            <button onClick={() => setSelectedProject(projectsData['quantix'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
+                                View Details <i className="ph-bold ph-arrow-right"></i>
+                            </button>
+                            
+                            <a 
+                                href="https://quantix-two.vercel.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand dark:text-slate-400 dark:hover:text-brand transition-colors"
+                            >
+                                Live Preview <i className="ph-bold ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
