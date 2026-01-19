@@ -65,6 +65,22 @@ const projectsData = {
         ],
         code : 'https://github.com/Zarrar48/quantix',
         discord : 'https://discord.gg/SExNGjV3'
+    },
+    'syntax': {
+        title: 'Syntax CMS Template',
+        icon: 'ph-article', 
+        color: 'text-indigo-500',
+        bg: 'bg-indigo-500/10',
+        purpose: 'A modern, high-performance React template designed for content-heavy applications, blogs, and social media platforms with a focus on typography and readability.',
+        stack: ['React.js', 'Vite', 'Tailwind CSS', 'React Router', 'Framer Motion'],
+        features: [
+            'Editorial-style layout with sticky sidebars and responsive grid.',
+            'Custom "Light/Dark" mode implementation with smooth transitions.',
+            'Component-based architecture suitable for scalable CMS frontends.',
+            'Optimized typography using Tailwind Typography plugins.'
+        ],
+        code : '/',
+        discord : '/'
     }
 };
 
@@ -129,7 +145,7 @@ const Projects = () => {
 
                 {/* Project 2: Mobile App */}
                 <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
-                     <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-4">
+                      <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-4">
                         <div className="w-32 h-full bg-white dark:bg-slate-950 rounded-2xl shadow-2xl border-4 border-slate-300 dark:border-slate-700 transform group-hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-slate-300 dark:bg-slate-700 rounded-b-lg"></div>
                             <div className="p-4 pt-8 flex flex-col gap-3 h-full">
@@ -165,9 +181,69 @@ const Projects = () => {
                     </div>
                 </div>
 
-                {/* Project 3: Trading Bot */}
+                {/* Project 3: Syntax CMS Template (NEW) */}
                 <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
-                     <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-6">
+                    <div className="h-52 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-950 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-6">
+                        {/* Browser Window UI */}
+                        <div className="w-full h-full bg-white dark:bg-slate-950 rounded-lg shadow-xl border border-indigo-200 dark:border-indigo-900/30 flex flex-col overflow-hidden transform group-hover:scale-105 transition-transform duration-500">
+                             {/* Browser Toolbar */}
+                            <div className="h-6 bg-slate-50 dark:bg-slate-900 border-b border-indigo-100 dark:border-slate-800 flex items-center px-3 gap-1.5">
+                                <div className="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+                                <div className="w-2 h-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+                                {/* Address Bar */}
+                                <div className="ml-2 w-1/2 h-3 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700"></div>
+                            </div>
+                            
+                            {/* App Content Preview */}
+                            <div className="flex-1 flex">
+                                {/* Sidebar */}
+                                <div className="w-1/4 h-full border-r border-indigo-50 dark:border-slate-800 p-2 flex flex-col gap-2">
+                                    <div className="w-full h-2 bg-indigo-100 dark:bg-indigo-900/40 rounded"></div>
+                                    <div className="w-3/4 h-2 bg-slate-100 dark:bg-slate-800 rounded"></div>
+                                    <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded"></div>
+                                </div>
+                                {/* Main Feed */}
+                                <div className="flex-1 p-3 flex flex-col gap-3">
+                                     <div className="w-full h-16 bg-indigo-50 dark:bg-slate-800/50 rounded-md border border-indigo-100 dark:border-slate-800 relative overflow-hidden">
+                                        <div className="absolute top-2 left-2 w-8 h-8 rounded bg-indigo-200 dark:bg-indigo-900"></div>
+                                     </div>
+                                     <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded"></div>
+                                     <div className="w-2/3 h-2 bg-slate-100 dark:bg-slate-800 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="p-6 flex-1 flex flex-col">
+                        <div className="flex gap-2 mb-4">
+                            <span className="px-2 py-1 text-xs font-bold bg-indigo-500/10 text-indigo-500 rounded">React</span>
+                            <span className="px-2 py-1 text-xs font-bold bg-cyan-500/10 text-cyan-500 rounded">Tailwind</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2">Syntax CMS Template</h3>
+                        <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed line-clamp-3">
+                            A clean, editorial-style React template designed for social media and content-heavy applications with a focus on modern typography.
+                        </p>
+                        
+                        <div className="mt-auto flex items-center justify-between">
+                            <button onClick={() => setSelectedProject(projectsData['syntax'])} className="inline-flex items-center gap-2 text-sm font-bold text-brand hover:text-brand-light transition-colors">
+                                View Details <i className="ph-bold ph-arrow-right"></i>
+                            </button>
+                            
+                            <a 
+                                href="https://syntax-eosin.vercel.app/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-brand dark:text-slate-400 dark:hover:text-brand transition-colors"
+                            >
+                                Live Preview <i className="ph-bold ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Project 4: Trading Bot */}
+                <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
+                      <div className="h-52 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 relative flex items-center justify-center overflow-hidden p-6">
                         <div className="w-full h-full bg-slate-900 rounded shadow-2xl p-4 font-mono text-xs text-green-400 flex flex-col gap-1 transform group-hover:scale-105 transition-transform duration-500 border border-slate-700">
                             <div className="flex gap-2 mb-2 border-b border-slate-800 pb-2">
                                 <div className="w-2 h-2 rounded-full bg-red-500"></div>
@@ -208,7 +284,9 @@ const Projects = () => {
 
                     </div>
                 </div>
-        <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
+
+                {/* Project 5: Quantix */}
+                <div className="reveal glass-card rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-300 flex flex-col">
                     <div className="h-52 bg-slate-900 relative flex items-center justify-center overflow-hidden">
                         {/* Background Grid Effect */}
                         <div className="absolute inset-0 opacity-20" style={{backgroundImage: 'radial-gradient(#22d3ee 1px, transparent 1px)', backgroundSize: '20px 20px'}}></div>
