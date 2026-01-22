@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import ThreeBackground from './components/ThreeBackground';
 import Hero from './components/Hero';
@@ -80,6 +81,8 @@ const handleOpenAiMatcher = () => {
         triggerMessage={triggerMessage}
         setTriggerMessage={setTriggerMessage}
       />
+      
+      <Analytics />
     </div>
   );
 }
