@@ -10,6 +10,7 @@ const skillsData = [
         { name: "Docker", icon: "ph-cube", color: "text-blue-500", bg: "bg-blue-500/10" },
     ],
     [
+        { name: "Flutter", icon: "ph-paper-plane-tilt", color: "text-cyan-500", bg: "bg-cyan-500/10" }, 
         { name: "React.js", icon: "ph-atom", color: "text-cyan-400", bg: "bg-cyan-400/10" },
         { name: "React Native", icon: "ph-device-mobile", color: "text-purple-400", bg: "bg-purple-400/10" },
         { name: "TypeScript", icon: "ph-file-code", color: "text-blue-600", bg: "bg-blue-600/10" },

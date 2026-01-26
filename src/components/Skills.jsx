@@ -11,6 +11,7 @@ const mobileSkills = [
     { name: "Python", icon: "ph-terminal-window", color: "text-yellow-500" },
     { name: "Tailwind", icon: "ph-paint-brush", color: "text-teal-400" },
     { name: "Git", icon: "ph-git-branch", color: "text-orange-500" },
+    { name: "Flutter", icon: "ph-paper-plane-tilt", color: "text-cyan-500"}
 ];
 
 const Skills = () => {

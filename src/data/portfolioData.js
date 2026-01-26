@@ -24,6 +24,7 @@ PROJECTS:
 3. Automated Trading Bot (Python, Docker): An algorithmic trading system that executes buy/sell orders based on technical indicators. Features real-time WebSocket data ingestion and Discord integration for trade alerts.
 4. Cafe-84 Mobile App (React Native, Redux): A cross-platform e-commerce app featuring smooth 60fps Lottie animations, Stripe payment integration, offline mode, and dynamic dark/light themes.
 5. Syntax CMS Template (React, Vite, Tailwind): A modern, editorial-style frontend template designed for content-heavy applications. Features a refined typographic hierarchy and component-based architecture.
+6. Vital Sync (Flutter): A comprehensive daily tracker designed to help users lose or gain weight by monitoring food intake, water consumption, and exercise habits..
 
 EDUCATION:
 - BS Computer Science, National University of Sciences and Technology (NUST), Islamabad (Sep 2021 - Sep 2025).
